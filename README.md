@@ -13,7 +13,7 @@
 
 ---
 
-**LiveTalk** enables real-time multimodal interactive avatar video generation through an improved on-policy distillation approach. By distilling bidirectional diffusion models into causal, few-step autoregressive models, LiveTalk achieves over **20× speedup**, enabling seamless real-time intereactive experience.
+**LiveTalk** enables real-time multimodal interactive avatar video generation through an improved on-policy distillation approach. By distilling bidirectional diffusion models into causal, few-step autoregressive models, LiveTalk achieves over **20× speedup**, enabling seamless real-time interactive experience.
 
 ---
 
@@ -130,11 +130,11 @@ These improvements eliminate training instability and deliver high-quality resul
 
 Built on the distilled few-step multimodal diffusion model, our system turns the recipe into an end-to-end, real-time talking avatar pipeline:
 
-- **Thinker / Talker (Audio LM)**: A streaming audio language model takes user text or audio as input and produces speech responses in real time.
-- **Performer (Few-Step Diffusion)**: Our 4-step causal video diffusion model generates video in **block-wise AR** fashion (3 latent frames per block), conditioned on (1) streaming audio, (2) a reference avatar image, and (3) motion-focused text prompts.
-- **KV Cache & Streaming**: Clean KV cache from previous blocks is prefilled to maintain temporal coherence while enabling low-latency, block-by-block video streaming synchronized to the audio.
-- **Long-Form Identity Preservation**: We adopt **Anchor-Heavy Identity Sinks (AHIS)**, reserving part of the KV window as fixed “identity anchors” while using a smaller rolling window for context, which stabilizes appearance over minutes-long interactions.
-- **Parallel Denoising & Decoding**: Diffusion denoising and VAE decoding run in a pipelined manner so that generation stays ahead of playback, avoiding stalls and achieving real-time rendering.
+- **Thinker / Talker (Audio LM)**: A streaming audio language model takes user text or audio as input and produces speech responses in real time
+- **Performer (Few-Step Diffusion)**: Our 4-step causal video diffusion model generates video in **block-wise AR** fashion (3 latent frames per block), conditioned on (1) streaming audio, (2) a reference avatar image, and (3) motion-focused text prompts
+- **KV Cache & Streaming**: Clean KV cache from previous blocks is prefilled to maintain temporal coherence while enabling low-latency, block-by-block video streaming synchronized to the audio
+- **Long-Form Identity Preservation**: We adopt **Anchor-Heavy Identity Sinks (AHIS)**, reserving part of the KV window as fixed “identity anchors” while using a smaller rolling window for context, which stabilizes appearance over minutes-long interactions
+- **Parallel Denoising & Decoding**: Diffusion denoising and VAE decoding run in a pipelined manner so that generation stays ahead of playback, avoiding stalls and achieving real-time rendering
 
 Together with the improved on-policy distillation recipe, this system delivers high-fidelity, lip-synced avatar videos with sub-second first-frame latency, supporting natural multi-turn multimodal interaction.
 
