@@ -1,0 +1,6 @@
+dtype: "fp32"
+dit_path: /inspire/hdd/project/qproject-fundationmodel/public/zlhu/models/Wan2.1-1.3B/diffusion_pytorch_model.safetensors
+exp_path: /inspire/hdd/project/qproject-fundationmodel/public/zlhu/models/OmniAvatar-1.3B
+output_folder: /inspire/hdd/project/qproject-fundationmodel/public/ethan/repos/livetalk
+reload_cfg: True
+use_audio: True

@@ -1,0 +1,29 @@
+# Model paths
+dtype: "bf16"
+text_encoder_path: pretrained_checkpoints/Wan2.1-T2V-1.3B/models_t5_umt5-xxl-enc-bf16.pth
+dit_path: pretrained_checkpoints/LiveTalk-1.3B-V0.1/model.safetensors
+vae_path: pretrained_checkpoints/Wan2.1-T2V-1.3B/Wan2.1_VAE.pth
+wav2vec_path: pretrained_checkpoints/wav2vec2
+
+# Input data paths
+image_path: examples/inference/example1.jpg
+audio_path: examples/inference/example1.wav
+prompt: "A realistic video of a person speaking directly to the camera. The individual maintains steady eye contact with clear, expressive facial features. Their facial expressions are naturally animated and emotionally engaging, with precise lip movements perfectly synchronized to their speech."
+output_path: "output_video.mp4"
+video_duration: 5  # Duration in seconds (should be 3n+2, e.g., 5, 8, 11, 14, 17, 20, ...)
+
+# Generation parameters
+max_hw: 720  # 720: 480p; 1280: 720p
+image_sizes_720: [[512,512]]
+fps: 16
+sample_rate: 16000
+num_steps: 4
+local_attn_size: 15
+
+# Causal inference parameters
+denoising_step_list: [1000, 750, 500, 250]
+warp_denoising_step: true
+num_transformer_blocks: 30
+frame_seq_length: 1024
+num_frame_per_block: 3
+independent_first_frame: False

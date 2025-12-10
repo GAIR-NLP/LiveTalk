@@ -1,0 +1,72 @@
+# Trainer Config
+trainer: ode  # Use the existing ODETrainer
+distribution_loss: ode  # Required for ODE regression training
+causal: true
+mixed_precision: true
+seed: 42
+denoising_step_list:
+- 1000
+- 936
+- 832
+- 624
+- 0
+warp_denoising_step: false
+
+# Base Model Config
+model_kwargs:
+  model_path: ./pretrained_checkpoints/OmniAvatar_merged/pytorch_model_merged_fp32.safetensors
+  timestep_shift: 5.0
+  is_causal: true
+  local_attn_size: -1
+  sink_size: 0
+
+# Training Config
+batch_size: 1
+total_batch_size: 64  # Will need gradient accumulation, need to set as config.batch_size * self.world_size. BE CAREFULL WITH THIS! THIS DEPENDS ON HOW MANY GPUS YOU ARE USING!!!
+lr: 4e-5
+beta1: 0.9
+beta2: 0.999
+weight_decay: 0
+gradient_checkpointing: true
+
+# Data Config
+data_path: example_dataset/dataset.txt
+ode_pairs_dir: example_dataset
+max_pair: 100000
+wav2vec_model_name: ./pretrained_checkpoints/wav2vec2
+
+# Frame Config (consistent with existing DMD configs)
+num_training_frames: 21
+num_frame_per_block: 3  # Match existing self-forcing configs for consistency
+independent_first_frame: false
+i2v: false
+
+# Video latent Config
+image_or_video_shape:
+- 1
+- 21
+- 16
+- 64
+- 64
+
+# Training Settings
+save_iters: 1000
+gc_interval: 100
+no_save: false
+no_visualize: false
+disable_wandb: false
+
+# FSDP Config
+sharding_strategy: hybrid_full # full for multi gpu, hybrid_full for multi node
+generator_fsdp_wrap_strategy: size
+text_encoder_fsdp_wrap_strategy: size
+
+# Wandb Config
+wandb_host: "https://api.wandb.ai"
+wandb_entity: "your_entity"
+wandb_project: "omniavatar-ode-distillation"
+wandb_save_dir: "./wandb_logs"
+config_name: "omniavatar_1.3b_ode_distillation"
+
+# Output Config
+logdir: "./logs/ode"
