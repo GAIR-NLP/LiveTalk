@@ -19,7 +19,7 @@
 
 ## Highlights
 
-- **Real-Time Generation**: Achieves 24.82 FPS throughput with 0.33s first-frame latency on a single GPU with compute comparable to an NVIDIA H200
+- **Real-Time Generation**: Achieves 24.82 FPS throughput with 0.33s first-frame latency
 - **Multimodal Conditioning**: Supports text, image, and audio inputs for flexible avatar control
 - **Efficient Inference**: Reduces inference time from ~83s to real-time through 4-step diffusion distillation
 - **Multi-Turn Coherence**: Demonstrates competitive performance against models like Veo3 and Sora2 on multi-round interaction benchmarks
@@ -93,7 +93,7 @@ The file structure will be:
 |   |-- wav2vec2
 ```
 ### Inference
-We currently offer a simple script for running video inference, but it does not support streaming input and output. The inference requires approximately 20GB of GPU memory usage. On a single H200-class GPU, our model runs at around 25 FPS, and on a single RTX 4090 it achieves around 11 FPS.
+We currently offer a simple script for running video inference, but it does not support streaming input and output. The inference requires approximately 20GB of GPU memory usage.
 
 Execute the inference script with your configuration:
 
