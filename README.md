@@ -4,7 +4,12 @@
 </p>
 
 <p align="center">
-  <h3 align="center"><a href="https://github.com/GAIR-NLP/blob/main/livetalk.pdf">Paper</a> | <a href="https://github.com/GAIR-NLP/livetalk">Website</a> | <a href="https://huggingface.co/GAIR/LiveTalk-1.3B-V0.1/">Models</a></h3>
+  <a href="https://github.com/GAIR-NLP/LiveTalk/blob/main/livetalk.pdf">
+    <img src="https://img.shields.io/badge/Paper-PDF-blue" alt="Paper PDF">
+  </a>
+  <a href="https://huggingface.co/GAIR/LiveTalk-1.3B-V0.1">
+    <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow" alt="Hugging Face Model">
+  </a>
 </p>
 
 <p align="center">
@@ -17,7 +22,7 @@
 
 ---
 
-## Highlights
+## ⭐ Highlights
 
 - **Real-Time Generation**: Achieves 24.82 FPS throughput with 0.33s first-frame latency
 - **Multimodal Conditioning**: Supports text, image, and audio inputs for flexible avatar control
@@ -31,16 +36,16 @@
   <img src="assets/examples.png" alt="LiveTalk Generation Examples" width="100%">
 </p>
 
-## Requirements
+## 🚀 Get started
+
+### Requirements
 
 We tested this repo on the following setup:
-* NVIDIA GPU with at least 24 GB memory (RTX 4090, A800, and H100 are tested)
+* NVIDIA GPU with at least 24 GB memory (RTX 4090, A800, and H800 are tested)
 * Linux operating system
 * 64 GB RAM
 
-Other hardware setups may work but haven't been tested.
-
-## Installation
+### Installation
 Clone the LiveTalk respository:
 ```bash
 git clone https://github.com/GAIR-NLP/livetalk.git
@@ -65,8 +70,6 @@ conda install -c conda-forge ffmpeg
 pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.8cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
 python setup.py develop
 ```
-
-## Quick Start
 
 ### Download Checkpoints
 
@@ -111,7 +114,7 @@ bash ./scripts/inference.sh
 - Audio synchronized with lip movements
 - Duration specified by `video_duration` parameter
 
-## Method Overview
+## 🔍 Method Overview
 
 ### Improved On-Policy Distillation Recipe
 
@@ -138,7 +141,18 @@ Built on the distilled few-step multimodal diffusion model, our system turns the
 
 Together with the improved on-policy distillation recipe, this system delivers high-fidelity, lip-synced avatar videos with sub-second first-frame latency, supporting natural multi-turn multimodal interaction.
 
-## Citation
+## 🙏 Acknowledgements
+
+This codebase builds upon:
+- [Self Forcing](https://github.com/self-forcing/self-forcing) for on-policy distillation framework
+- [CausVid](https://github.com/tianweiy/CausVid) for autoregressive video diffusion
+- [Wan2.1](https://github.com/Wan-Video/Wan2.1) and [OmniAvatar](https://github.com/omniavatar/omniavatar) for multimodal video diffusion
+
+## 📄 License
+
+This project is released under the Apache 2.0 license.
+
+## 📚 Citation
 
 If you find this codebase useful for your research, please cite our paper:
 
@@ -150,14 +164,3 @@ If you find this codebase useful for your research, please cite our paper:
   year={2025}
 }
 ```
-
-## Acknowledgements
-
-This codebase builds upon:
-- [Self Forcing](https://github.com/self-forcing/self-forcing) for on-policy distillation framework
-- [CausVid](https://github.com/tianweiy/CausVid) for autoregressive video diffusion
-- [Wan2.1](https://github.com/Wan-Video/Wan2.1) and [OmniAvatar](https://github.com/omniavatar/omniavatar) for multimodal video diffusion
-
-## License
-
-This project is released under the Apache 2.0 license.
