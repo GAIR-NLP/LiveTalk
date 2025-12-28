@@ -16,11 +16,27 @@
   <img src="assets/overview.png" alt="LiveTalk System Overview" width="100%">
 </p>
 
----
+
 
 **LiveTalk** enables real-time multimodal interactive avatar video generation through an improved on-policy distillation approach. By distilling bidirectional diffusion models into causal, few-step autoregressive models, LiveTalk achieves over **20× speedup**, enabling seamless real-time interactive experience.
 
----
+
+## 🎬 Demo
+
+<table class="center">
+<tr>
+    <td width=33% style="border: none">
+        <video controls autoplay loop src="https://github.com/user-attachments/assets/2f7a6713-80c3-4c39-b2cf-e6faa8aeb690" muted="false"></video>
+    </td>
+    <td width=33% style="border: none">
+        <video controls autoplay loop src="https://github.com/user-attachments/assets/a5174292-1f01-4bf8-9baa-41d38693dd7a" muted="false"></video>
+    </td>
+    <td width=33% style="border: none">
+        <video controls autoplay loop src="https://github.com/user-attachments/assets/8aa4d613-36b1-4420-b0d6-8f1b607d7801" muted="false"></video>
+    </td>
+</tr>
+</table>
+
 
 ## ⭐ Highlights
 
