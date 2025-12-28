@@ -37,6 +37,10 @@
 </tr>
 </table>
 
+<p align="center">
+  <img src="assets/examples.png" alt="LiveTalk Generation Examples" width="100%">
+</p>
+
 
 ## ⭐ Highlights
 
@@ -45,12 +49,6 @@
 - **Efficient Inference**: Reduces inference time from ~83s to real-time through 4-step diffusion distillation
 - **Multi-Turn Coherence**: Demonstrates competitive performance against models like Veo3 and Sora2 on multi-round interaction benchmarks
 - **End-to-End System**: Provides integration with audio language models for conversational AI applications
-
-## Examples
-
-<p align="center">
-  <img src="assets/examples.png" alt="LiveTalk Generation Examples" width="100%">
-</p>
 
 ## 🚀 Get started
 
