@@ -10,6 +10,10 @@
   <a href="https://huggingface.co/GAIR/LiveTalk-1.3B-V0.1"><img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow" alt="Hugging Face Model"></a>
 </p>
 
+<p align="center">
+  <img src="assets/overview.png" alt="LiveTalk System Overview" width="100%">
+</p>
+
 **LiveTalk** enables real-time multimodal interactive avatar video generation through an improved on-policy distillation approach. By distilling bidirectional diffusion models into causal, few-step autoregressive models, LiveTalk achieves over **20× speedup**, enabling seamless real-time interactive experience.
 
 
