@@ -4,18 +4,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/GAIR-NLP/LiveTalk/blob/main/livetalk.pdf">
-    <img src="https://img.shields.io/badge/Paper-PDF-blue" alt="Paper PDF">
+  <a href="http://arxiv.org/abs/2512.23576">
+  <img src="https://img.shields.io/badge/arXiv-2512.23576-b31b1b" alt="arXiv">
   </a>
   <a href="https://huggingface.co/GAIR/LiveTalk-1.3B-V0.1">
     <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow" alt="Hugging Face Model">
   </a>
 </p>
-
-<p align="center">
-  <img src="assets/overview.png" alt="LiveTalk System Overview" width="100%">
-</p>
-
 
 
 **LiveTalk** enables real-time multimodal interactive avatar video generation through an improved on-policy distillation approach. By distilling bidirectional diffusion models into causal, few-step autoregressive models, LiveTalk achieves over **20× speedup**, enabling seamless real-time interactive experience.
@@ -38,7 +33,7 @@
 </table>
 
 <p align="center">
-  <img src="assets/examples.png" alt="LiveTalk Generation Examples" width="100%">
+  <img src="assets/examples.png" alt="LiveTalk Generation Examples" width="60%">
 </p>
 
 
@@ -174,7 +169,7 @@ If you find this codebase useful for your research, please cite our paper:
 @article{livetalk2025,
   title={LiveTalk: Real-Time Multimodal Interactive Video Diffusion via Improved On-Policy Distillation},
   author={Chern, Ethan and Hu, Zhulin and Tang, Bohao and Su, Jiadi and Chern, Steffi and Deng, Zhijie and Liu, Pengfei},
-  journal={arXiv preprint},
+  journal={arXiv preprint arXiv:2512.23576},
   year={2025}
 }
 ```
