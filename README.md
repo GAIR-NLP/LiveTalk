@@ -1,7 +1,8 @@
-<p align="center">
-<h1 align="center">LiveTalk</h1>
-<h3 align="center">Real-Time Multimodal Interactive Video Diffusion via Improved On-Policy Distillation</h3>
-</p>
+<div align="center">
+  <img src="assets/livetalk_icon.png" alt="LiveTalk icon" width="360" />
+  <h1 style="margin: 0;">LiveTalk</h1>
+  <h3 style="margin-top: 6px;">Real-Time Multimodal Interactive Video Diffusion via Improved On-Policy Distillation</h3>
+</div>
 
 <p align="center">
   <a href="http://arxiv.org/abs/2512.23576"><img src="https://img.shields.io/badge/arXiv-2512.23576-b31b1b" alt="arXiv"></a>
