@@ -167,7 +167,7 @@ This project is released under the Apache 2.0 license.
 If you find this codebase useful for your research, please cite our paper:
 
 ```bibtex
-@article{livetalk2025,
+@article{chern2025livetalk,
   title={LiveTalk: Real-Time Multimodal Interactive Video Diffusion via Improved On-Policy Distillation},
   author={Chern, Ethan and Hu, Zhulin and Tang, Bohao and Su, Jiadi and Chern, Steffi and Deng, Zhijie and Liu, Pengfei},
   journal={arXiv preprint arXiv:2512.23576},
